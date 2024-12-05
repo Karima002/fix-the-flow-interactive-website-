@@ -158,3 +158,35 @@ nav ul.second-nav {
         padding-left: .5em;
     }
 }
+
+
+
+.ondertitel-logo {
+    display: none;
+    @media (min-width: 46em) {
+        display: block;
+        grid-area: tekst;
+        font-family: var(--font-default);
+        font-size: var(--font-size-menu);
+        text-transform: uppercase; 
+        color: var(--black-opacity);
+    }
+    
+}
+
+.button-doneren {
+    display: none;
+    @media (min-width: 46em) {
+        display: block;
+        grid-area: doneren;
+    }
+}
+
+.search-button {
+    /* flex-grow:1;  */
+    @media (min-width: 46em) {
+        grid-area: zoeken;
+        place-content: right;
+        padding-left: 1em;
+    }
+}
