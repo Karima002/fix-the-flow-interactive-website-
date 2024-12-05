@@ -91,6 +91,11 @@ ul {
     
 .second-nav {
     padding-left: 2em;
+    @media (min-width: 46em) {
+        border: solid #fff .5px; /* Witte tweede navigatiebalk met een lichte grijze rand, */
+        background-color: var(--white);
+        margin-top: .5em;
+    }
 }
 .second-nav a{
     text-decoration: none; /* De links in de tweede navigatiebalk hebben geen onderstreping */
@@ -98,4 +103,58 @@ ul {
     line-height: 2.5em;
     font-family: "Inter", sans-serif; /* Tekst wordt weergegeven in het Inter-lettertype, 13px groot */
     font-size: 13px; 
+}
+
+nav ul.second-nav {
+    @media (min-width: 46em) {
+        display: flex;
+        justify-content: center; /*lijstitems worden gecentreerd met een ruimte van 1em tussen de items */
+        gap: 1em; 
+        order: 1;
+        width: 100%;
+        border: solid #E1E1E1 .5px; /* Witte tweede navigatiebalk met een lichte grijze rand, */
+    }
+}
+
+.second-nav a{
+    text-decoration: none; /* De links in de tweede navigatiebalk hebben geen onderstreping */
+    color: black;
+    line-height: 2.5em;
+    font-family: "Inter", sans-serif; /* Tekst wordt weergegeven in het Inter-lettertype, 13px groot */
+    font-size: 13px; 
+}
+
+/* CSS voor de logo, ondertitel, en doneerknop */
+.section-logo-boven {
+    display: flex;
+    flex-grow: 1;
+    align-items:center; 
+    @media (min-width: 46em) {
+        display: grid;
+        grid-template-areas: 
+        "logo doneren zoeken"
+        "tekst doneren zoeken";
+        grid-template-columns: 7.5fr .5fr .5fr;
+        grid-template-rows: 1fr 1fr;
+        background-color: var(--white);
+        width: 100%; /*neemt gehele scherm in beslag*/
+        margin-top: 1em;
+        margin-left: 1.1em;
+    }
+}
+.logo-link {
+    margin-inline: auto; /*wordt toegepast om een element horizontaal te centreren in zijn container. Voor nu gebruikt om de logo te centreren in mobiele versie*/
+    @media (min-width: 46em) {
+        margin-inline: unset; /*door de margin-inline op unset te zetten kan */
+    }
+}
+ 
+.logo-above {
+    /* flex-grow:1; na een code-review bleek dat flex-grow ervoor zorgt dat de logo niet in het midden komt te staan */
+    justify-content:center;
+    padding: 0;
+    @media (min-width: 46em) {
+        grid-area: logo;
+        padding-left: .5em;
+    }
 }
