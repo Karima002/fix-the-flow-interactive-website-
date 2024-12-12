@@ -4,7 +4,7 @@
     box-sizing: border-box;
 }
 
-
+/* MARK: HEADER*/
 /* CSS voor de header en navigatiebar */
 header {
     display: flex; /*elementen in de header gaan flexen*/
@@ -104,8 +104,12 @@ nav .sub-nav a {
         text-decoration: none; /* Onderstreping van de tekst is uitgeschakeld */
         font-family: var(--font-default);  /* Lettertype wordt bepaald door de variabel uit de gezamenlijke stylesheet  */
         margin-right: 1em; /* Voegt ruimte toe aan de rechterkant van de svg */
+    
     }
+    
 }
+
+
 
 ul {
     list-style: none; /*Verwijdert standaard styling van de list*/
@@ -141,6 +145,10 @@ nav ul.main-nav {
         width: 100%;
         border: solid #E1E1E1 .5px; /* Witte tweede navigatiebalk met een lichte grijze rand, */
     }
+}
+
+nav.toonMenu { /*aangemaakte class in javascript*/
+    translate: 0% 0%; /*Menu komt in beeld*/
 }
 
 /* CSS voor de logo */
@@ -202,5 +210,83 @@ div {
         font-size: var(--font-size-meta);
         text-transform: uppercase; 
         color: var(--black-opacity);
+    }
+}
+
+/* MARK: MAIN */
+/* CSS voor de main */
+
+.frontpage-news {
+    padding: 1em 1em 0 1em; /*De hoofdsectie heeft padding aan de boven-, rechter- en linkerzijde: met de klok mee:*/
+    display: grid; /* Grid lay-out voor de main section */
+    @media (min-width: 46em) {
+        display: grid; /* Grid lay-out voor de titelsectie met vier rijen en drie kolommen */
+        grid-template-rows: min-content;
+        grid-template-areas: /*grid template areas voor de tekst en img */
+        "text1 img"
+        "text2 img"
+        "text3 img"
+        "text4 img";
+        row-gap: .7em; /* Ruimte tussen rijen */
+        column-gap: 4em; /* Ruimte tussen kolommen */
+        padding: 14em 7em 6em 6em;
+    } 
+}
+
+.category-frontpage {
+    text-align: center;
+    font-family: var(--font-default); /* Lettertype bepaald door variabel uit de gezamenlijke stylesheet */
+    font-size: var(--font-size-menu); /* Lettergrootte bepaald door variabel uit de gezamenlijke stylesheet */
+    color: var(--primary-color); 
+    text-transform: uppercase;
+    font-weight: bold; /* Vetgedrukte tekst */
+        @media (min-width: 46em) {
+            text-align: center;
+            grid-area: text1; /* Positie van een area in de grid */
+        }
+    }
+
+.title-article {
+    text-align: center;
+        @media (min-width: 46em) {
+            grid-area: text2;
+            text-align: left;
+            font-family: "Tiempos Headline";
+            font-size: var(--font-size-header-xxl);  /* Lettergrootte bepaald door variabel uit de gezamenlijke stylesheet */
+            letter-spacing: var(--letter-spacing-s);
+            line-height: var(--line-height-xs);
+            text-align: center;
+    }       
+}
+
+h1:hover {
+    text-decoration: underline;
+    cursor: pointer;
+}
+
+.text_intro {
+    display: none;
+        @media (min-width: 46em) {
+            display: block;
+            grid-area: text3;
+            font-family: var(--font-default); /* De ondertitel wordt weergegeven in het Inter-lettertype, 16px groot */
+            font-size: var(--font-size-intro);  /* Lettergrootte bepaald door variabel uit de gezamenlijke stylesheet */
+            text-align: center;
+        }        
+}
+
+.author {
+    display: none;
+    @media (min-width: 46em) {
+        display: block;
+        grid-area: text4;
+        font-family: var(--font-default);
+        font-size: var(--font-size-header-xs);  /* Lettergrootte bepaald door variabel uit de gezamenlijke stylesheet */
+    }
+}
+
+.frontpage-image {
+    @media (min-width: 46em) {
+        grid-area: img;
     }
 }
