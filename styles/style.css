@@ -219,6 +219,11 @@ div {
 .frontpage-news {
     padding: 1em 1em 0 1em; /*De hoofdsectie heeft padding aan de boven-, rechter- en linkerzijde: met de klok mee:*/
     display: grid; /* Grid lay-out voor de main section */
+    grid-template-areas: 
+    "p1"
+    "p2"
+    "img2";
+    grid-template-columns:minmax(1rem 1fr) ;
     @media (min-width: 46em) {
         display: grid; /* Grid lay-out voor de titelsectie met vier rijen en drie kolommen */
         grid-template-rows: min-content;
@@ -234,6 +239,7 @@ div {
 }
 
 .category-frontpage {
+    grid-area: p1;
     text-align: center;
     font-family: var(--font-default); /* Lettertype bepaald door variabel uit de gezamenlijke stylesheet */
     font-size: var(--font-size-menu); /* Lettergrootte bepaald door variabel uit de gezamenlijke stylesheet */
@@ -247,6 +253,7 @@ div {
     }
 
 .title-article {
+    grid-area: 1fr;
     text-align: center;
         @media (min-width: 46em) {
             grid-area: text2;
@@ -275,18 +282,22 @@ h1:hover {
         }        
 }
 
-.author {
+/* .author {
     display: none;
     @media (min-width: 46em) {
         display: block;
         grid-area: text4;
         font-family: var(--font-default);
-        font-size: var(--font-size-header-xs);  /* Lettergrootte bepaald door variabel uit de gezamenlijke stylesheet */
+        font-size: var(--font-size-header-xs);  Lettergrootte bepaald door variabel uit de gezamenlijke stylesheet 
     }
-}
+} */
 
 .frontpage-image {
-    @media (min-width: 46em) {
+    width: 100%;
+    height: auto;
+        @media (min-width: 46em) {
+        height: auto;
+        width: 530px;
         grid-area: img;
     }
 }
