@@ -1,6 +1,7 @@
 *{
     margin: 0;
     padding: 0;
+    box-sizing: border-box;
 }
 
 
@@ -13,9 +14,11 @@ header {
     background-color: var(--white);
     height: 4em;
     @media (min-width:46em) {
+        display: flex;
         flex-wrap: wrap;
+        
         button {
-            display: none; /*Op een width van 48em (736px) passen alle menubalk knoppen. Op dat moment is de menbalk-icoon niet meer nodig. Deze wordt hiermee verbor*/
+            display: none; /*Op een width van 48em (736px) passen alle menubalk knoppen. Op dat moment is de menbalk-icoon niet meer nodig. Deze wordt hiermee verborgen*/
         }
         nav button {
             display: none;
@@ -23,26 +26,37 @@ header {
     }
 }
 
-button {
-    all: unset; /*Verwijdert de standaard styling van de button*/
-    cursor: pointer;
-}
-
-
-.hamburgermenu {
-    display: grid;
-    grid-area:
-    "menu"
-    "text";
-}
-
-
-.text-menu {
-    @media (min-width: 46em) {
-        display: none;
-        grid-area: text;
+header div {
+	margin-inline:auto;
+    @media (min-width:46em) {
+        display: flex;
+        margin-inline-start: 0;
+        flex-direction: column;
     }
 }
+
+header div p {
+	display:none; /*Tekst 'podium voor journalisten' wordt niet weergegeven in mobiel scherm*/
+}
+
+.search-button {
+    display: flex;
+    flex-direction: column; /*zorgt ervoor dat de zoek tekst onder de svg wordt geplaatst*/
+    padding-right: .4em;
+    
+}
+
+.button--menu-open {
+	order:-1; /*Menu  svg wordt naar links geplaatst*/
+    display: flex;
+    flex-direction: column; /*zorgt ervoor dat de menu tekst onder de svg wordt geplaatst*/
+    padding: 1em;
+    @media (min-width: 46em) {
+        display: none;
+    }
+}
+
+
 /* CSS voor navigatie */
 nav {
     position: fixed;
@@ -60,14 +74,7 @@ nav {
         }
 }
 
-
-
-nav.toonMenu { /*aangemaakte class in javascript*/
-    translate: 0% 0%; /*Menu komt in beeld*/
-}
-
-
-nav .first-nav {
+nav .sub-nav {
     padding-left: 2em;
     padding-top: 2em;
     background-color: var(--white);
@@ -79,10 +86,11 @@ nav .first-nav {
         background-color: var(--black); /*Zwarte achtergrondkleur voor de eerste navigatiebalk: variabel uit de gezamenlijke stylesheet */
         top: 10px;
         padding-top: 0; /*Padding-top op 0 bij groot scherm*/
+        order: -2; /*order wordt aangepast waardoor de tweede navigatiebalk naar boven gaat*/
     }
 }
 
-nav .first-nav a {
+nav .sub-nav a {
     text-decoration: none;
     color:var(--black); 
     font-family: var(--font-default); 
@@ -99,23 +107,24 @@ nav .first-nav a {
     }
 }
 
-nav a[aria-current="page"] {
-    color:red;
+ul {
+    list-style: none; /*Verwijdert standaard styling van de list*/
 }
 
-ul {
-    list-style: none;
-}
-    
-.second-nav {
+.main-nav {
     padding-left: 2em;
+    text-decoration: none; /* De links in de tweede navigatiebalk hebben geen onderstreping */
+    color: black;
+    line-height: 2.5em;
+    font-family: "Inter", sans-serif; /* Tekst wordt weergegeven in het Inter-lettertype, 13px groot */
+    font-size: var(--font-size-meta);
     @media (min-width: 46em) {
         border: solid #fff .5px; /* Witte tweede navigatiebalk met een lichte grijze rand, */
         background-color: var(--white);
         margin-top: .5em;
     }
 }
-.second-nav a{
+.main-nav a{
     text-decoration: none; /* De links in de tweede navigatiebalk hebben geen onderstreping */
     color: black;
     line-height: 2.5em;
@@ -123,7 +132,7 @@ ul {
     font-size: 13px; 
 }
 
-nav ul.second-nav {
+nav ul.main-nav {
     @media (min-width: 46em) {
         display: flex;
         justify-content: center; /*lijstitems worden gecentreerd met een ruimte van 1em tussen de items */
@@ -134,55 +143,41 @@ nav ul.second-nav {
     }
 }
 
-.second-nav a{
-    text-decoration: none; /* De links in de tweede navigatiebalk hebben geen onderstreping */
-    color: black;
-    line-height: 2.5em;
-    font-family: "Inter", sans-serif; /* Tekst wordt weergegeven in het Inter-lettertype, 13px groot */
-    font-size: var(--font-size-meta);
-}
-
-/* CSS voor de logo, ondertitel, en doneerknop */
-.section-logo-boven {
+/* CSS voor de logo */
+div {
     display: flex;
     flex-grow: 1;
     align-items:center; 
     @media (min-width: 46em) {
-        display: grid;
-        grid-template-areas: 
-        "logo doneren zoeken"
-        "tekst doneren zoeken";
-        grid-template-columns: 7.5fr .5fr .5fr;
-        grid-template-rows: 1fr 1fr;
         background-color: var(--white);
-        width: 100%; /*neemt gehele scherm in beslag*/
+        /* width: 100%; neemt gehele scherm in beslag: was niet meer nodig zodat search en doneren naar rechts zouden gaan*/
         margin-top: 1em;
-        margin-left: 1.1em;
+        /* margin-left: 1.1em; */
+        align-items: unset; /*Logo en ondertitel komen aan de linkerkant te staan om bovenstaande align-itemns te overschrijden*/
+        padding: 1em; /*kleine padding vanuit de boven en zijkanten*/
     }
 }
 .logo-link {
     margin-inline: auto; /*wordt toegepast om een element horizontaal te centreren in zijn container. Voor nu gebruikt om de logo te centreren in mobiele versie*/
     @media (min-width: 46em) {
         margin-inline: unset; /*door de margin-inline op unset te zetten kan */
+        /* grid-area: logo; */
     }
 }
- 
+
 .logo-above {
     /* flex-grow:1; na een code-review bleek dat flex-grow ervoor zorgt dat de logo niet in het midden komt te staan */
     justify-content:center;
     padding: 0;
     @media (min-width: 46em) {
-        grid-area: logo;
         padding-left: 1.4em;
     }
 }
-
 
 .ondertitel-logo {
     display: none;
     @media (min-width: 46em) {
         display: block;
-        grid-area: tekst;
         font-family: var(--font-default);
         font-size: var(--font-size-meta);
         text-transform: uppercase; 
@@ -195,15 +190,17 @@ nav ul.second-nav {
     display: none;
     @media (min-width: 46em) {
         display: block;
-        grid-area: doneren;
+        align-items: right;
+        padding: 1em;
     }
 }
 
 .search-button {
-    /* flex-grow:1;  */
     @media (min-width: 46em) {
-        grid-area: zoeken;
-        place-content: right;
-        padding-left: 1em;
+        align-content: right;
+        font-family: var(--font-default);
+        font-size: var(--font-size-meta);
+        text-transform: uppercase; 
+        color: var(--black-opacity);
     }
 }
