@@ -104,7 +104,10 @@ nav .sub-nav a {
         text-decoration: none; /* Onderstreping van de tekst is uitgeschakeld */
         font-family: var(--font-default);  /* Lettertype wordt bepaald door de variabel uit de gezamenlijke stylesheet  */
         margin-right: 1em; /* Voegt ruimte toe aan de rechterkant van de svg */
-    
+        &:hover {
+            text-decoration: underline;
+            color: var(--primary-color);
+        }
     }
     
 }
@@ -134,6 +137,10 @@ ul {
     line-height: 2.5em;
     font-family: "Inter", sans-serif; /* Tekst wordt weergegeven in het Inter-lettertype, 13px groot */
     font-size: 13px; 
+    &:hover {
+        text-decoration: underline;
+        color: var(--primary-color);
+    }
 }
 
 nav ul.main-nav {
