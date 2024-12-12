@@ -1,6 +1,6 @@
 // stap 1: zoek de menu-button op en sla die op in een variabele
 const openButton = //In JavaScript wordt const gebruikt om een variabele te declareren die niet hernoemd of opnieuw toegewezen kan worden.
-document.querySelector("header > button"); //hiermee wordt de de button menu opgezocht.
+document.querySelector("header section button"); //hiermee wordt de de button menu opgezocht.
 
 // stap 2: laat de menu-button luisteren naar kliks en voer dan een functie uit
 openButton.addEventListener("click", openMenu); // Zo ga je een event (actie) toevoegen. We moeten nog wel zeggen wat de click gaat doen:
