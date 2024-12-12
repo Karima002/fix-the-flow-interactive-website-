@@ -31,7 +31,7 @@ function openSearch(){
 }
 
 
-/*
+/* experiment met andere javascript voor menubalk
 //Stap 1: selecteren geschikt element
 let openButton = document.querySelector('header button--menu-open');
 let naviGation = document.querySelector('nav');
