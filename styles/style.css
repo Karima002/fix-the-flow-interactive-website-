@@ -354,3 +354,6 @@ h2:hover {
     font-family: var(--font-default);
     font-size: var(--font-size-header-xs);  /* Lettergrootte bepaald door variabel uit de gezamenlijke stylesheet */
 }
+
+/* MARK: FOOTER */
+/* CSS voor de footer */
