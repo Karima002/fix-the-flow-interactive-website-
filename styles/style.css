@@ -221,6 +221,7 @@ div {
     font-family: var(--font-default);
     font-size: var(--font-size-meta);
     text-transform: uppercase;
+    margin-right: .4em;
     @media (min-width: 46em) {
         align-content: right;
         font-family: var(--font-default);
