@@ -105,9 +105,9 @@ nav .sub-nav a {
         font-family: var(--font-default);  /* Lettertype wordt bepaald door de variabel uit de gezamenlijke stylesheet  */
         margin-right: 1em; /* Voegt ruimte toe aan de rechterkant van de svg */
         &:hover {
-            text-decoration: underline;
-            color: var(--primary-color);
-        }
+        text-decoration: underline;
+        color: var(--primary-color);
+    }
     }
     
 }
@@ -220,23 +220,21 @@ div {
     }
 }
 
-.zoeken {
-    transition:translate 1s;
-}
 
 .zoeken.toonSearch {
     translate: 0% 0%;
 }
 
 
-search {
+.zoeken {
+    transition:translate 1s;
     position: fixed;
     top: 0;
     left: 0;
     top:0;
     bottom:0;
     width: 100%;
-    background-color: rgba(0, 0, 0, 0.7);
+    background-color: rgba(70, 56, 56, 0.7);
     translate: 0% -100%; /*Search scherm komt tevoorschijn van bovenaan naar beneden*/
 }
 
