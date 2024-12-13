@@ -84,9 +84,10 @@ nav .sub-nav {
         gap: 1em; /* Er is een ruimte van 1em tussen de items */
         width: 100%;
         background-color: var(--black); /*Zwarte achtergrondkleur voor de eerste navigatiebalk: variabel uit de gezamenlijke stylesheet */
-        top: 10px;
+        top: 0px;
         padding-top: 0; /*Padding-top op 0 bij groot scherm*/
         order: -2; /*order wordt aangepast waardoor de tweede navigatiebalk naar boven gaat*/
+        position: fixed;
     }
 }
 
@@ -169,7 +170,7 @@ div {
         margin-top: 1em;
         /* margin-left: 1.1em; */
         align-items: unset; /*Logo en ondertitel komen aan de linkerkant te staan om bovenstaande align-itemns te overschrijden*/
-        padding: 1em; /*kleine padding vanuit de boven en zijkanten*/
+        padding: 2em; /*kleine padding vanuit de boven en zijkanten*/
     }
 }
 .logo-link {
