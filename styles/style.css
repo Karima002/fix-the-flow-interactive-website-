@@ -16,7 +16,7 @@ header {
     @media (min-width:46em) {
         display: flex;
         flex-wrap: wrap;
-        
+
         button {
             display: none; /*Op een width van 48em (736px) passen alle menubalk knoppen. Op dat moment is de menbalk-icoon niet meer nodig. Deze wordt hiermee verborgen*/
         }
@@ -51,6 +51,9 @@ header div p {
     display: flex;
     flex-direction: column; /*zorgt ervoor dat de menu tekst onder de svg wordt geplaatst*/
     padding: 1em;
+    font-family: var(--font-default);
+    font-size: var(--font-size-meta);
+    text-transform: uppercase;
     @media (min-width: 46em) {
         display: none;
     }
@@ -185,8 +188,10 @@ div {
     /* flex-grow:1; na een code-review bleek dat flex-grow ervoor zorgt dat de logo niet in het midden komt te staan */
     justify-content:center;
     padding: 0;
+    width: 140;
     @media (min-width: 46em) {
-        padding-left: 1.4em;
+        padding-left: .5em;
+
     }
 }
 
@@ -208,16 +213,21 @@ div {
         display: block;
         align-items: right;
         padding: 1em;
+        margin-top: 1em;
     }
 }
 
 .search-button {
+    font-family: var(--font-default);
+    font-size: var(--font-size-meta);
+    text-transform: uppercase;
     @media (min-width: 46em) {
         align-content: right;
         font-family: var(--font-default);
         font-size: var(--font-size-meta);
         text-transform: uppercase; 
         color: var(--black-opacity);
+        margin-top: .8em;
     }
 }
 
@@ -250,7 +260,7 @@ form:not(.form_search) { /*overschrijding gezamenlijke stylesheet*/
 /* CSS voor de main */
 
 .frontpage-news {
-    padding: 1em 1em 0 1em; /*De hoofdsectie heeft padding aan de boven-, rechter- en linkerzijde: met de klok mee:*/
+    padding: 3em 1em 0 1em; /*De hoofdsectie heeft padding aan de boven-, rechter- en linkerzijde: met de klok mee:*/
     display: grid; /* Grid lay-out voor de main section */
     grid-template-areas: 
     "p1"
@@ -350,7 +360,7 @@ h1:hover {
 .carosel-1 {
     padding: 3em 7em 3em 6em; /* Zet de padding rondom de main, beginnend met top */
     @media (max-width: 46em) { /* Voor schermen die maximaal 725px zijn wordt de onderstaande regel uitgevoerd */
-        padding: 3em 2em 2em 2em; /* Pas de padding aan voor kleinere schermen */
+        padding: 4em .7em 2em .7em; /* Pas de padding aan voor kleinere schermen */
     }
 }
 
