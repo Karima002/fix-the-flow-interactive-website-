@@ -301,7 +301,7 @@ form:not(.form_search) {
     }
 }
 
-button { 
+.submit--form-button { 
     border: .2em solid var(--lightgrey);
     margin-top: 2em;
     max-width: 30%;
