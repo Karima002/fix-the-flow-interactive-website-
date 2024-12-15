@@ -18,8 +18,8 @@
 <body>
     <header>
         <!-- div voor de logo en ondertitel -->
-        <div>
-            <a class="logo-link" href="index.html"><img class="logo-above" src= ./assets/image-redpers.png alt="logo-redpers" width="160" height="35"></a>
+        <div class="logo-menu">
+            <a class="logo-link" href="index.html"><img class="logo-above" src= ./assets/image-redpers.png alt="logo-redpers" height="35"></a>
             <p class="ondertitel-logo">Podium voor journalisten</p>          
         </div>
 
@@ -30,20 +30,30 @@
             </svg> Zoeken
         </button>
 
-        <!-- <search>
+        <search class="zoeken">
             <form>
                 <label>
                     <input type="search">
                 </label>
             </form>
-        </search> -->
+        </search>
 
         <!-- button voor open menu -->
-        <button class="button--menu-open"><svg width="36" height="36" viewBox="0 0 36 36" fill="none" xmlns="http://www.w3.org/2000/svg">
+        <button class="button--menu-open">
+            <svg width="36" height="36" viewBox="0 0 36 36" fill="none" xmlns="http://www.w3.org/2000/svg">
             <rect width="36" height="36" fill="white"/>
             <path fill-rule="evenodd" clip-rule="evenodd" d="M9.75 10.5C9.75 10.0858 10.0858 9.75 10.5 9.75H25.5C25.9142 9.75 26.25 10.0858 26.25 10.5C26.25 10.9142 25.9142 11.25 25.5 11.25H10.5C10.0858 11.25 9.75 10.9142 9.75 10.5ZM9.75 18C9.75 17.5858 10.0858 17.25 10.5 17.25H25.5C25.9142 17.25 26.25 17.5858 26.25 18C26.25 18.4142 25.9142 18.75 25.5 18.75H10.5C10.0858 18.75 9.75 18.4142 9.75 18ZM9.75 25.5C9.75 25.0858 10.0858 24.75 10.5 24.75H25.5C25.9142 24.75 26.25 25.0858 26.25 25.5C26.25 25.9142 25.9142 26.25 25.5 26.25H10.5C10.0858 26.25 9.75 25.9142 9.75 25.5Z" fill="black"/>
             </svg>Menu
         </button>
+
+        <!-- button voor het sluiten van de menu -->
+         <!-- <button class="button--menu-sluit">
+            <svg width="40" height="40" viewBox="0 0 36 36" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <rect width="36" height="36" fill="white"/>
+            <path fill-rule="evenodd" clip-rule="evenodd" d="M9.96967 26.0303C9.67678 25.7374 9.67678 25.2626 9.96967 24.9697L24.9697 9.96967C25.2626 9.67678 25.7374 9.67678 26.0303 9.96967C26.3232 10.2626 26.3232 10.7374 26.0303 11.0303L11.0303 26.0303C10.7374 26.3232 10.2626 26.3232 9.96967 26.0303Z" fill="black"/>
+            <path fill-rule="evenodd" clip-rule="evenodd" d="M9.96967 9.96967C10.2626 9.67678 10.7374 9.67678 11.0303 9.96967L26.0303 24.9697C26.3232 25.2626 26.3232 25.7374 26.0303 26.0303C25.7374 26.3232 25.2626 26.3232 24.9697 26.0303L9.96967 11.0303C9.67678 10.7374 9.67678 10.2626 9.96967 9.96967Z" fill="black"/>
+            </svg>                
+        </button> -->
 
         <nav>
             <ul class="main-nav">
@@ -74,6 +84,7 @@
             </a>
         </nav>
     </header>
+
 
     <main>
         <h1>Contact us</h1>
@@ -129,6 +140,54 @@
                 <p>Mail naar <a href="mailto:frederique@redpers.nl">frederique@redpers.nl </a></p>
             </section>
     </main>
+
+    <footer>
+        <!-- logo redpers -->
+        <a href="index.html"><img src="assets/image-redpers.png" alt="logo Redpers" class="image-footer"></a>
+
+
+        <div class="footer">
+            <h5 class="rubrieken">Rubrieken</h5>
+                <div class="rubrics">
+                    <a href="https://redpers.nl/category/rubriek/binnenland/">Binnenland</a>
+                    <a href="https://redpers.nl/category/rubriek/buitenland/">Buitenland</a>
+                    <a href="https://redpers.nl/category/rubriek/column/">Columns</a>
+                    <a href="https://redpers.nl/category/rubriek/economie/">Economie</a>
+                    <a href="https://redpers.nl/category/rubriek/kunst-media/">Kunst & Media</a>
+                    <a href="https://redpers.nl/category/rubriek/podcast/">Podcasts</a>
+                    <a href="https://redpers.nl/category/rubriek/politiek/">Politiek</a>
+                    <a href="https://redpers.nl/category/rubriek/wetenschap/">Wetenschap</a>
+                </div>
+
+            <h5 class="navigatie">Navigatie</h5>
+                <div class="navigation">
+                    <a href="https://redpers.nl/colofon/">Colofon</a>
+                    <a href="https://redpers.nl/contact/">Contact</a>
+                    <a href="">Doneren</a>
+                    <a href="https://redpers.nl/meedoen/">Meedoen</a>
+                    <a href="https://redpers.nl/over-red-pers/">Over Red Pers</a>
+                </div>
+
+            <h5 class="service">Service</h5>
+                <div class="service-2">
+                    <a href="">Tip van de redactie</a>
+                    <a href="">Meld een fout</a>
+                </div>
+
+            <h5 class="meer-redpers">Meer Red Pers</h5>
+                <div class="more-redpers">
+                    <a href="">Nieuwsbrief</a>
+                    <a href="https://www.linkedin.com/company/redpersnl/">Linkedin</a>
+                    <a href="https://www.facebook.com/RedPersNL/">Facebook</a>
+                    <a href="https://www.instagram.com/RedPersNL/">Instagram</a>
+                    <a href="https://www.instagram.com/RedPersNL/">X (Twitter)</a>
+                </div>
+            </div>
+
+        <p class="copyright">© 2024 Stichting Red Pers – Alle rechten voorbehouden</p>
+
+    </footer>
+
 
     <script src="scripts/index.js"></script>
   
