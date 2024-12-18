@@ -50,7 +50,8 @@ https://github.com/Karima002/fix-the-flow-interactive-website-/blob/35a3d1bdc405
 1. Het zoeken van de menu-button en opslaan in een variabele
 2. Laat de menu-button luisteren naar kliks en voer dan een functie uit
 3.  In de functie wordt er een class toegevoegd aan het HTML element. Zo kan je de interactie verder bewerken via CSS:
-   https://github.com/Karima002/fix-the-flow-interactive-website-/blob/35a3d1bdc40568e214f3fff9a1139088f5684a85/styles/style.css#L39-L53
+
+https://github.com/Karima002/fix-the-flow-interactive-website-/blob/35a3d1bdc40568e214f3fff9a1139088f5684a85/styles/style.css#L39-L53
 https://github.com/Karima002/fix-the-flow-interactive-website-/blob/35a3d1bdc40568e214f3fff9a1139088f5684a85/styles/style.css#L257-L260
 
 
