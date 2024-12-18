@@ -17,9 +17,6 @@ header {
         display: flex;
         flex-wrap: wrap;
 
-        button {
-            display: none; /*Op een width van 48em (736px) passen alle menubalk knoppen. Op dat moment is de menbalk-icoon niet meer nodig. Deze wordt hiermee verborgen*/
-        }
         nav button {
             display: none;
         }    
@@ -39,12 +36,6 @@ header div p {
 	display:none; /*Tekst 'podium voor journalisten' wordt niet weergegeven in mobiel scherm*/
 }
 
-.search-button {
-    display: flex;
-    flex-direction: column; /*zorgt ervoor dat de zoek tekst onder de svg wordt geplaatst*/
-    padding-right: .4em;
-    
-}
 
 .button--menu-open {
 	order:-1; /*Menu  svg wordt naar links geplaatst*/
@@ -60,6 +51,111 @@ header div p {
 }
 
 
+
+.search-button {
+    display: flex;
+    flex-direction: column; /*zorgt ervoor dat de zoek tekst onder de svg wordt geplaatst*/
+    padding-right: .4em;
+    font-family: var(--font-default);
+    font-size: var(--font-size-meta);
+    text-transform: uppercase;
+    margin-right: .4em;
+    @media (min-width: 46em) {
+        align-content: right;
+        font-family: var(--font-default);
+        font-size: var(--font-size-meta);
+        text-transform: uppercase; 
+        color: var(--black-opacity);
+        margin-top: .8em;
+    }
+}
+
+.zoeken.toonSearch {
+    translate: 0% 0%;
+}
+
+
+.zoeken {
+    transition:translate 1s;
+    position: fixed;
+    top: 0;
+    left: 0;
+    top:0;
+    bottom:0;
+    width: 100%;
+    background:rgba(0, 0, 0, .7);
+    translate: 0% -100%; /*Search scherm komt tevoorschijn van bovenaan naar beneden*/
+}
+
+form:not(.form_search) { /*overschrijding gezamenlijke stylesheet*/
+    input:not([type="submit"]), textarea {
+    background:rgba(0, 0, 0, 1);
+    outline: none;
+    margin-top:0;
+    }
+}
+
+form:not(.form_search) {
+input[type="search"] {
+    font-size: var(--font-size-header-m);
+    width: 100%;
+    text-align: center;
+    top: 0%;
+        @media (min-width: 46em) {
+        position: absolute;
+        top: 10%;
+        width: 100%;
+        font-size: var(--font-size-header-xxl);
+        font-weight: 300;
+        text-align: center;
+        margin-top: -51px;
+        padding-left: 1.875em;
+        padding-right: 1.875em;
+        }
+    }
+}
+
+.buttons--search {
+    display: grid;
+    grid-template-rows: 1fr 1fr;
+    grid-template-columns: 1fr 1fr ;
+    justify-content: center;    
+    @media (min-width: 46em) {
+        margin-left: 15em;
+        width: 100%;
+    }
+}
+
+
+button[type="button"] {
+    background:rgba(0, 0, 0, 1);
+    margin: .8em;
+    border-radius: .5em;
+    padding: .5em;
+    color: var(--primary-color);
+    @media (min-width:46em) {
+        z-index: 1;
+        grid-column: 1/2;
+        grid-row: 1/2;
+        margin-top: 9em;
+        place-content: center;
+    }
+}
+
+
+button[type="submit"] {
+    background:rgba(0, 0, 0, 1);
+    margin: .8em;
+    border-radius: .5em;
+    padding: .5em;
+    color: var(--primary-color);
+    @media (min-width:46em) {
+        z-index: 1;
+        grid-column: 2/3;
+        grid-row: 1/2;
+        margin-top: 9em;
+    }
+}
 /* CSS voor navigatie */
 nav {
     position: fixed;
@@ -217,65 +313,6 @@ nav.toonMenu { /*aangemaakte class in javascript*/
     }
 }
 
-.search-button {
-    font-family: var(--font-default);
-    font-size: var(--font-size-meta);
-    text-transform: uppercase;
-    margin-right: .4em;
-    @media (min-width: 46em) {
-        align-content: right;
-        font-family: var(--font-default);
-        font-size: var(--font-size-meta);
-        text-transform: uppercase; 
-        color: var(--black-opacity);
-        margin-top: .8em;
-    }
-}
-
-
-.zoeken.toonSearch {
-    translate: 0% 0%;
-}
-
-
-.zoeken {
-    transition:translate 1s;
-    position: fixed;
-    top: 0;
-    left: 0;
-    top:0;
-    bottom:0;
-    width: 100%;
-    background:rgba(0, 0, 0, .7);
-    translate: 0% -100%; /*Search scherm komt tevoorschijn van bovenaan naar beneden*/
-}
-
-form:not(.form_search) { /*overschrijding gezamenlijke stylesheet*/
-    input:not([type="submit"]), textarea {
-    background:rgba(0, 0, 0, 1);
-    outline: none;
-    }
-}
-
-form:not(.form_search) {
-input[type="search"] {
-    font-size: var(--font-size-header-m);
-    width: 100%;
-    text-align: center;
-    top: 0%;
-        @media (min-width: 46em) {
-        position: absolute;
-        top: 10%;
-        width: 100%;
-        font-size: var(--font-size-header-xxl);
-        font-weight: 300;
-        text-align: center;
-        margin-top: -51px;
-        padding-left: 30px;
-        padding-right: 30px;
-        }
-    }
-}
 
 /* MARK: MAIN */
 /* CSS voor de main */
