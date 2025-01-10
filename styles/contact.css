@@ -334,7 +334,7 @@ form:not(.form_search) {
     flex-direction: column;
     text-decoration: none;
     color:var(--black);
-    line-height: 1.5em;
+    line-height: 1.8em;
 }
 
 .image-footer {
