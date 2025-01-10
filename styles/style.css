@@ -475,7 +475,7 @@ h2:hover {
 
 .footer a{
     font-family: var(--font-default);
-    font-size: var(--font-size-footer);
+    font-size: var(--font-size-text);
     display: flex;
     flex-direction: column;
     text-decoration: none;
