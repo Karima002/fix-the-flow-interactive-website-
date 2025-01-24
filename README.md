@@ -40,6 +40,13 @@ De laatste interactie is het toepassen van de view transition tussen de homepagi
 
 https://github.com/user-attachments/assets/6684ed02-6789-498f-ab66-c694ac416a4e
 
+## Ontwerpkeuzes
+Mijn eerste ontwerpkeuze was het maken van een zoekfunctie in een nieuwe pagina (dan de homepagina). Dit ontwerp heb ik niet doorgevoerd omdat je hiervoor geen javascript nodig is: https://github.com/Karima002/fix-the-flow-interactive-website-/issues/19#issuecomment-2583726060. Vervolgens heb ik een nieuw ontwerp gemaakt waarbij de zoekfunctie verschijnt op de homepagina met een translate: https://github.com/Karima002/fix-the-flow-interactive-website-/blob/854c41868c93b4673ad64a72528e181c1a6c3004/styles/style.css#L89
+
+Ook heb ik de zoekfunctie zo ontworpen dat de gebruiker terug kan gaan naar de pagina of het trefwoord kan zoeken middels buttons: https://github.com/Karima002/fix-the-flow-interactive-website-/issues/19#issue-2736939125
+
+
+
 ## Kenmerken
 
 ### Menubalk
