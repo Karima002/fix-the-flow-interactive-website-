@@ -16,10 +16,6 @@ De opdrachtgever gaf aan dat ik het verschil tussen artikelpagina en homepagina 
 ### Homepagina (verbeterde versie a.d.h.v. feedback)
 ![image](https://github.com/user-attachments/assets/d78a38ee-aff4-44b4-9108-c39e79e1ce67)
 
-### Inspiratie 
-![image](https://github.com/user-attachments/assets/e50fdd20-3364-49d3-933b-bd5d029b4104)
-
-Verder vond de opdrachtgever de dark versie heel tof en mooier dan de light version. Opdrachtgever waardeerde ook de subtielheid van de carousel.
 
 ## Interacties
 ### Menubalk
