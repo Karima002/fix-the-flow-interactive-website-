@@ -55,9 +55,28 @@ De logo is een straatnaambord. De logo vertelt je _waar_ je bent.
 De titel van de contactpagina is ook een straatnaambord. Ook de titel van de contactpagina vertelt op welke pagina je bent.
 
 
-## Bewegwijzering
+**Bewegwijzering**
 ![image](https://github.com/user-attachments/assets/fd257a2c-972f-45df-a96f-1d8c75a2385b)
 De eerste en tweede menubalken zijn bewegwijzering. De menu-items vertellen je _naar_ waar je kan surfen.
+
+### Feedback en feedforward
+_________________________________________________________________________________________________________
+
+**Interactie menu**
+
+https://github.com/user-attachments/assets/eb51f9a7-3d28-4a19-b133-ef37694b34fa
+
+**Feedforward**: Door de label en de cursor kan de gebruiker verwachten dat er een menu openspringt. De volgende stap is het klikken op een categorie in de menubalk of het sluiten van de menubalk.  
+**Feedback**: De interactie heeft gewerkt: menu is open. 
+
+_________________________________________________________________________________________________________
+
+**Interactie zoekbalk**
+
+https://github.com/user-attachments/assets/94ce3f5f-3db0-45a9-a362-f62c149f42c1
+
+**Feedforward**: Met 'zoek trefwoord' in de inputveld krijgt de gebruiker een feedforward over waar de zoekterm moet worden ingevoerd. Door de knoppen 'terug' en 'zoeken' weet de gebruiker wat de volgende stap na het toetsen van het trefwoord.  
+**Feedback**: Na het klikken op 'zoeken' krijgt de gebruiker feedback dat de zoekbalk scherm is geopend
 
 
 ## Kenmerken
