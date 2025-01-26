@@ -45,6 +45,19 @@ Mijn eerste ontwerpkeuze was het maken van een zoekfunctie in een nieuwe pagina 
 
 Ook heb ik de zoekfunctie zo ontworpen dat de gebruiker terug kan gaan naar de pagina of het trefwoord kan zoeken middels buttons: https://github.com/Karima002/fix-the-flow-interactive-website-/issues/19#issue-2736939125
 
+### Straatnaambordjes en wegbewijzering
+**Logo**  
+![image](https://github.com/user-attachments/assets/9d31ec3d-6c0a-4b6d-8642-a23c28f837c7)  
+De logo is een straatnaambord. De logo vertelt je _waar_ je bent.
+
+**Titel**
+![image](https://github.com/user-attachments/assets/6d92952e-66ad-4551-8ac0-8a19e8e4787f)  
+De titel van de contactpagina is ook een straatnaambord. Ook de titel van de contactpagina vertelt op welke pagina je bent.
+
+
+## Bewegwijzering
+![image](https://github.com/user-attachments/assets/fd257a2c-972f-45df-a96f-1d8c75a2385b)
+De eerste en tweede menubalken zijn bewegwijzering. De menu-items vertellen je _naar_ waar je kan surfen.
 
 
 ## Kenmerken
